@@ -36,6 +36,21 @@ const groceries = ['🍎', '🍊'];
 groceries.push('🍪');
 // console.log(groceries);
 
-console.log(groceries.slice(1, groceries.length));
+// console.log(groceries.slice(1, groceries.length));
 
-console.log(groceries.indexOf('🍎'));
+// console.log(groceries.indexOf('🍎'));
+
+const letterFrequency = (phrase) => {
+  let frequency = {};
+
+  for (const letter of phrase) {
+    if (letter in frequency) {
+      frequency[letter] += 1;
+    } else {
+      frequency[letter] = 1;
+    }
+  }
+  return frequency;
+}
+
+console.log(letterFrequency("nilesh"));
